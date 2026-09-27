@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CISC 4900 Showcase</title>
+<meta name="description" content="An online exhibition of senior capstone projects from Brooklyn College's CISC 4900 course.">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="logo" href="#">CISC <span>4900</span> Showcase</a>
+  <nav><a href="#projects">Projects</a><a href="#cohorts">Cohorts</a><a href="#advice">Advice</a></nav>
+</div></header>
+
+<div class="hero-band">
+  <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+  <div class="wrap hero">
+    <span class="eyebrow">Brooklyn College · Senior Capstone</span>
+    <h1>Senior projects from <span class="grad-text">Brooklyn College CIS</span></h1>
+    <p>Browse capstone work from past CISC 4900 cohorts — what students built, the tools they used, and what they wish they'd known as freshmen.</p>
+    <div class="hero-cta"><a class="cta" href="#projects">Explore projects →</a><a class="cta ghost" href="#advice">Read the advice</a></div>
+  </div>
+</div>
+
+<main class="wrap">
+  <div class="stats" id="stats"></div>
+
+  <section id="projects">
+    <h2><span class="h-icon">🚀</span> Projects</h2>
+    <p class="sub">Projects with a public repository or demo video. Filter by semester, type, or technology.</p>
+    <div class="filters">
+      <input id="q" type="search" placeholder="Search titles, descriptions, students…" aria-label="Search projects">
+      <select id="sem" aria-label="Semester"></select>
+      <select id="cat" aria-label="Project type"></select>
+    </div>
+    <div class="chips" id="tech" aria-label="Technology filter"></div>
+    <p class="count" id="count"></p>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <section id="cohorts">
+    <h2><span class="h-icon">🎓</span> Cohorts</h2>
+    <p class="sub">Every student who agreed to share their work, by semester. Project details for earlier cohorts are still being collected.</p>
+    <div id="cohortList"></div>
+  </section>
+
+  <section id="advice">
+    <h2><span class="h-icon">💡</span> Advice to freshmen</h2>
+    <p class="sub">From the exit survey: <em>"What advice would you give to freshmen preparing for internships or jobs?"</em></p>
+    <div class="filters" style="position:static">
+      <select id="advMajor" aria-label="Filter advice by major"></select>
+    </div>
+    <div class="advice" id="adviceGrid"></div>
+    <button class="more" id="moreAdvice">Show more</button>
+  </section>
+</main>
+
+<footer class="site"><div class="wrap">
+  CISC 4900 — Senior Capstone, Department of Computer &amp; Information Science, Brooklyn College (CUNY).
+  Projects shown with student permission from end-of-semester exit surveys.
+</div></footer>
+
+<!-- Data files first, then the app script -->
+<script src="data/projects.js"></script>
+<script src="data/advice.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
