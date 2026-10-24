@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Advice · CISC 4900 Showcase</title>
+<meta name="description" content="Advice from graduating CISC 4900 students to freshmen.">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="advice">
+<header class="top"><div class="wrap">
+  <a class="logo" href="index.html">CISC <span>4900</span> Showcase</a>
+  <nav><a href="explore.html">Explore</a><a href="types.html">Project Types</a><a href="advice.html" aria-current="page">Advice</a></nav>
+</div></header>
+
+<main class="wrap">
+  <section id="advice">
+    <h2><span class="h-icon">💡</span> Advice to freshmen</h2>
+    <p class="sub">From the exit survey: <em>"What advice would you give to freshmen preparing for internships or jobs?"</em></p>
+    <div class="filters" style="position:static">
+      <select id="advMajor" aria-label="Filter advice by major"></select>
+    </div>
+    <div class="advice" id="adviceGrid"></div>
+    <button class="more" id="moreAdvice">Show more</button>
+  </section>
+</main>
+
+<footer class="site"><div class="wrap">
+  CISC 4900 — Senior Capstone, Department of Computer &amp; Information Science, Brooklyn College (CUNY).
+  Projects shown with student permission from end-of-semester exit surveys.
+</div></footer>
+
+<script src="data/projects.js"></script>
+<script src="data/advice.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
