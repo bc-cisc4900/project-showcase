@@ -40,7 +40,8 @@ header.top .wrap{display:flex;align-items:center;justify-content:space-between;g
 nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-size:15px;font-weight:500;position:relative}
 nav a::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:2px;border-radius:2px;background:linear-gradient(90deg,var(--brand),var(--accent));transform:scaleX(0);transition:transform .25s}
 nav a:hover{color:var(--ink)}
-nav a:hover::after{transform:scaleX(1)}
+nav a:hover::after,nav a[aria-current="page"]::after{transform:scaleX(1)}
+nav a[aria-current="page"]{color:var(--ink)}
 
 /* ---------- Hero band ---------- */
 .hero-band{position:relative;overflow:hidden;color:#fff;
@@ -110,16 +111,22 @@ h2{font-size:28px;margin:0 0 6px;letter-spacing:-.015em;display:flex;align-items
 .btn svg{width:16px;height:16px}
 .empty{padding:40px;text-align:center;color:var(--muted);border:2px dashed var(--line);border-radius:var(--radius)}
 
-/* ---------- Cohorts ---------- */
-details.cohort{background:var(--surface);border:1px solid var(--line);border-left:5px solid var(--brand);border-radius:14px;padding:14px 18px;margin-bottom:10px;box-shadow:var(--shadow)}
-details.cohort:nth-child(5n+2){border-left-color:var(--blue)}
-details.cohort:nth-child(5n+3){border-left-color:var(--violet)}
-details.cohort:nth-child(5n+4){border-left-color:var(--accent)}
-details.cohort:nth-child(5n+5){border-left-color:#10b981}
-details.cohort summary{cursor:pointer;font-weight:700}
-.roster{columns:3 220px;gap:24px;padding:0;margin:12px 0 0;list-style:none}
-.roster li{break-inside:avoid;padding:6px 0;border-bottom:1px solid var(--line);font-size:15px}
-.roster li small{color:var(--muted);display:block;font-size:13px}
+/* ---------- Home: start-here paths ---------- */
+.paths{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.path{--c:var(--brand);display:flex;flex-direction:column;gap:6px;text-decoration:none;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-top:5px solid var(--c);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);transition:transform .25s,box-shadow .25s}
+.path:hover{transform:translateY(-4px);box-shadow:var(--shadow-hover)}
+.path b{font-size:18px;color:var(--c)}
+.path span{color:var(--muted);font-size:15px}
+
+/* ---------- Project Types page ---------- */
+.type-jump{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:8px}
+.type-jump .chip{text-decoration:none}
+.type-jump small{color:var(--muted);margin-left:4px}
+.type-panel{padding:28px 0 8px;scroll-margin-top:70px}
+.type-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:12px;margin-bottom:14px;padding-left:12px;border-left:5px solid var(--c)}
+.type-head h3{margin:0;font-size:22px;color:var(--c)}
+.type-head span{color:var(--muted);font-size:14px}
+.type-head a{margin-left:auto;font-size:14px;font-weight:600;color:var(--c);text-decoration:none}
 
 /* ---------- Advice ---------- */
 .advice{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}

@@ -14,9 +14,12 @@ The page reloads each time you save. You can also double-click `index.html`, sin
 
 ```
 cisc4900-showcase/
-├── index.html          Page structure (sections, filters, nav)
+├── index.html          Home: hero, stats, links to the other pages
+├── explore.html        Project gallery with search and filters
+├── types.html          Projects grouped by type
+├── advice.html         Seniors' advice to freshmen
 ├── css/styles.css      All styling: colors are in :root at the top, dark mode included
-├── js/app.js           Renders stats, project cards, filters, cohorts, advice
+├── js/app.js           Shared script: stats, Explore filters, Project Types, Advice
 ├── data/
 │   ├── projects.js     Project data the page loads (generated)
 │   ├── advice.js       Advice quotes the page loads (generated)
@@ -33,7 +36,7 @@ cisc4900-showcase/
 | Want to… | Edit |
 |---|---|
 | Change colors / fonts | `css/styles.css` → `:root` variables at the top |
-| Change headline or section text | `index.html` |
+| Change headline or page text | the page's `.html` file |
 | Change how a project card looks | `js/app.js` → `card()` function |
 | Fix one project's title or description | `data/projects.json`, then run `python3 build_data.py` |
 | Change project categories | `scripts/build_data.py` → `CATEGORIES` |
